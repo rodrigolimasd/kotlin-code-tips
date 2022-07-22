@@ -4,7 +4,7 @@ import model.Person
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class LetTest {
+class LetRunWithTest {
 
     @Test
     fun `should using let to map pair to object`() {
