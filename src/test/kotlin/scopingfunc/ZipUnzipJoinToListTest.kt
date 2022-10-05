@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
 class ZipUnzipJoinToListTest {
-    
+
     @Test
     fun `should create list of tuples with two list`(){
         val colors = listOf("red", "brown", "grey")

@@ -1,0 +1,4 @@
+package scopingfunc
+
+class FlattenTest {
+}
