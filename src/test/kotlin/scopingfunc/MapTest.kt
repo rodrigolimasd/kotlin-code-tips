@@ -27,10 +27,19 @@ class MapTest {
     }
 
     @Test
-    fun `should create list of tuples with rwo list`(){
+    fun `should create list of tuples with two list`(){
         val colors = listOf("red", "brown", "grey")
         val animals = listOf("fox", "bear", "wolf")
         val expected = listOf("red" to "fox", "brown" to "bear", "grey" to "wolf")
         Assertions.assertIterableEquals(expected, colors.zip(animals))
+    }
+
+    @Test
+    fun `should create two list from one list of pair`(){
+        val numberPairs = listOf("one" to 1, "two" to 2, "three" to 3, "four" to 4)
+        val unzipedPair = numberPairs.unzip()
+        Assertions.assertIterableEquals(listOf("one","two","three","four"), unzipedPair.first)
+        Assertions.assertIterableEquals(listOf(1,2,3,4), unzipedPair.second)
+
     }
 }
