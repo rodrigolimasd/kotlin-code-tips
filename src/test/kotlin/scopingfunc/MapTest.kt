@@ -2,6 +2,7 @@ package scopingfunc
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
+import kotlin.math.exp
 
 class MapTest {
 
@@ -23,7 +24,13 @@ class MapTest {
             listOf(2,6,12,20),
             numbers.mapIndexedNotNull{i, v -> if (i == 0) null else v * i}
         )
+    }
 
-
+    @Test
+    fun `should create list of tuples with rwo list`(){
+        val colors = listOf("red", "brown", "grey")
+        val animals = listOf("fox", "bear", "wolf")
+        val expected = listOf("red" to "fox", "brown" to "bear", "grey" to "wolf")
+        Assertions.assertIterableEquals(expected, colors.zip(animals))
     }
 }
