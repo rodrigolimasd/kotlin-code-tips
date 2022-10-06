@@ -3,7 +3,7 @@ package scopingfunc
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class AnyNoneAllPartitionListTest {
+class AnyNoneAllListTest {
 
     @Test
     fun `should check any none all from list`() {
