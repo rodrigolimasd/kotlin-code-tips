@@ -14,14 +14,4 @@ class AnyNoneAllPartitionListTest {
         Assertions.assertFalse(numbers.all { it.endsWith("e") })
     }
 
-    @Test
-    fun `should partition list`() {
-        val numbers = listOf("one", "two", "three", "four")
-
-        val partitioned = numbers.partition { it.length > 3 }
-
-        Assertions.assertIterableEquals(listOf("one","two"), partitioned.second)
-        Assertions.assertIterableEquals(listOf("three","four"), partitioned.first)
-
-    }
 }
